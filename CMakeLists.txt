@@ -8,8 +8,9 @@ target_sources(stylizer_sdl3 PUBLIC
 		common.cppm
 		event.cppm
 		input.cppm
+		window.cppm
 )
-target_link_libraries(stylizer_sdl3 PUBLIC stylizer stylizer::input)
+target_link_libraries(stylizer_sdl3 PUBLIC stylizer stylizer::input stylizer::window)
 target_compile_definitions(stylizer_sdl3 PUBLIC -DSTYLIZER_SDL3_AVAILABLE)
 
 add_library(stylizer::sdl3 ALIAS stylizer_sdl3)

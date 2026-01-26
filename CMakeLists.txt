@@ -7,5 +7,6 @@ target_sources(stylizer_sdl3 PUBLIC
 		event.cppm
 )
 target_link_libraries(stylizer_sdl3 PUBLIC stylizer)
+target_compile_definitions(stylizer_sdl3 PUBLIC -DSTYLIZER_SDL3_AVAILABLE)
 
 add_library(stylizer::sdl3 ALIAS stylizer_sdl3)
